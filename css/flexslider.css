@@ -1,0 +1,94 @@
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider{margin: 0 0 0px; position: relative; }
+.flexslider,
+.slides,
+.slides li,
+.flex-viewport{
+	height: 100% !important;
+}
+.flexslider img{
+	max-width: 100%;
+	height: auto !important;
+	vertical-align: middle;
+	display: inline-block;
+}
+.slides>li.fullheight img{
+	height: 100% !important;
+	max-width: auto;
+}
+.slides>li{
+	vertical-align: middle;
+	text-align: center;
+	position: relative;
+}
+.slides>li:after{
+	display: inline-block;
+	vertical-align:middle;
+    height:100%;
+    width: 0;
+	content: "";
+}
+
+.slideshow_banner{
+	position: absolute;
+	text-align: left;
+	width: 512px;
+	max-width: 85%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(215,232,225,0.95);
+	transform: translate(-30px,-30px);
+    -webkit-transform: translate(-30px,-30px);
+    -o-transform: translate(-30px,-30px);
+    -moz-transform: translate(-30px,-30px);
+    opacity: 0;
+}
+.slideshow_banner_inner{
+	padding: 60px 20px 0 40px;
+}
+
+.flex-active-slide .slideshow_banner{
+	transform: translate(0px,0);
+    -webkit-transform: translate(0px,0);
+    -o-transform: translate(0px,0);
+    -moz-transform: translate(0px,0);
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    transition-delay: 1s;
+    opacity: 1;
+}
+
+.flex-viewport{}
+.loading .flex-viewport {max-height: 300px;}
+.flexslider .slides {zoom: 1;}
+
+/* Direction Nav */
+.flex-direction-nav a{
+	width: 50%;
+	height: 100%;
+	margin: 0px 0 0;
+	display: block;
+	position: absolute;
+	top: 0;
+}
+
+.flex-direction-nav .flex-next {right: 0px;cursor:url("../images/next_arrow.png"), default;}
+.flex-direction-nav .flex-prev {left: 0px;cursor:url("../images/prev_arrow.png"), default;}
+
+/* Control Nav */
+.flex-control-nav {width: 100%; position: absolute; bottom: 0px; text-align: center;}
+.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: url('') repeat;cursor: pointer; text-indent: -9999px;}
+.flex-control-paging li a:hover, .flex-control-paging li a.flex-active{ background-position:0 0;}
+
+.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.flex-control-thumbs img {width: 100%; display: block; cursor: pointer;}
+.flex-control-thumbs img:hover {opacity: 1;}
+.flex-control-thumbs .active {opacity: 1; cursor: default;}
+}

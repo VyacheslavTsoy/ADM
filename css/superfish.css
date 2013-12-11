@@ -1,0 +1,83 @@
+nav{ position:relative; margin: 0px 0 0 0;}
+.sf-menu ul {position:absolute;top:-999px; display:none;/* left offset of submenus need to match (see below) */}
+.sf-menu ul li {width:100%}
+.sf-menu li {float:left;position:relative}
+
+.sf-menu>li>a{
+  display:block;
+  position:relative;
+  font-size: px;
+  line-height: px;
+  color:#;
+}
+.sf-menu>li>a:hover,.sf-menu>li.current>a,.sf-menu>li.sfHover>a{
+  
+}
+
+.sf-menu>li{
+  
+}
+.sf-menu a{
+  
+}
+
+/*================================>> 2 Level <<========================================*/
+.sf-menu>li>ul,.sf-menu>li.sfHover>ul{left:0;top:50px;width: px;padding:0 0 0 0; z-index:99}
+.sf-menu>li>ul>li{}
+.sf-menu>li>ul>li>a{}
+.sf-menu li li a:hover, .sf-menu li.sfHover li.sfHover>a{}
+
+/*================================>> 3 Level <<========================================*/
+.sf-menu li li ul{left:0;top:0px;width: px;padding:0 0 0 0;z-index:99}
+.sf-menu li li li{}
+.sf-menu li li li a{}
+.sf-menu li li li a:hover{}
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 995px) {
+	 .sf-menu>li>a .menu-arrow{
+    display:inline-block;
+    width:px;
+    margin-left:5px;
+    height:;
+    text-indent:-100%;
+    font-size:0;
+    line-height:0;
+    background: url('../images/menu_arrow.png') no-repeat;
+    vertical-align: middle;
+}
+	 .sf-menu a.sf-with-ul{
+    
+   }
+	 .sf-menu a:hover .menu-arrow, .sf-menu li.current>a .menu-arrow, .sf-menu .sfHover>a:hover .menu-arrow{
+    background-position:0;
+   }
+}
+
+@media only screen and (max-width: 767px) {
+  nav{
+		float:none;
+		font:12px/15px Arial, Helvetica, sans-serif;
+		text-transform:uppercase;
+		color:#fff;
+		padding:29px 0;
+	}
+		nav:before{
+			content:'Menu:';
+			display:block;
+			margin-bottom:5px;
+		}
+	.sf-menu{display:none;}
+	nav select{
+		font:12px/15px Arial, Helvetica, sans-serif;
+		color:#464646;
+		width:100%;
+    outline: none;
+    padding: 5px;
+		border:2px solid #9e9e9e;
+	}
+	
+}
+
+@media only screen and (max-width: 479px) {
+	
+}

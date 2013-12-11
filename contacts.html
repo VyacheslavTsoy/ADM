@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Контакты</title>
+    <meta name = "format-detection" content = "telephone=no" />
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
+    <script src="js/jquery.js"></script>
+  	<script src="js/jquery.tinycarousel.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+  	<script src="js/script.js"></script>
+  	<script>
+		  $(window).load(function() {
+				$('#portfolio_slider').tinycarousel({
+            axis: 'y',
+            display: 1,
+            controls: true,
+            interval: true,
+            duration: 800
+        });
+        
+        $("#carousel").owlCarousel({
+          items : 2,
+          itemsDesktop : [1199,2],
+          itemsDesktopSmall : [980,2],
+          addClassActive: true,
+          navigation: true,
+          pagination: false,
+          navigationText:  [" "," "],
+          slideSpeed: 800
+        });
+
+        function hide_spinner(){
+          $("body").addClass("show")
+        }
+        setTimeout(hide_spinner, 500)
+			});
+	 </script>
+	<!--[if lt IE 8]>
+   <div style=' clear: both; text-align:center; position: relative;'>
+     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+       <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+    </a>
+  </div>
+<![endif]-->
+    <!--[if lt IE 9]>
+   	<script type="text/javascript" src="js/html5.js"></script>
+    	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+
+<div class="global_wrap">
+  <!--==============================> Navigation <==================================-->
+     <nav class="m_navigation">
+      <div class="nav_inner">
+        <div class="wrapper reg nav_top">
+        <!-- Logo -->
+          <div class="f_left logo"><a href="index.html">ADM</a></div>
+        
+        <!-- Language list  -->
+          <ul class="reg f_right lang_list">
+            <li class="lang_item"><a href="#">en</a></li>
+            <li class="lang_item"><a href="#">de</a></li>
+            <li class="lang_item"><a href="#" class="active">ru</a></li>
+          </ul>
+        </div>
+
+        <!-- Main Menu  -->
+        <ul class="reg menu">
+          <li class="menu_item"><a href="about.html">Мастерская</a></li>
+          <li class="menu_item"><a href="downloads.html">скачать PDF</a></li>
+          <li class="menu_item"><a href="vacancy.html">вакансии</a></li>
+          <li class="current menu_item"><a href="contacts.html">контакты</a></li>
+        </ul>
+        <!-- End of Main Menu -->
+        
+        <!-- Posrtfolio Carousel -->
+         <div id="portfolio_slider">
+          <a class="buttons prev" href="#"></a>
+           <div class="viewport">
+             <ul class="overview">
+               <li class="portfolio_item">
+                   <figure class="portfolio_img">
+                      <a href="index.html"><span class="rollover"></span><img src="pic/portdolio_thumb1.jpg" alt=""></a>
+                   </figure>
+                   <div class="portfolio_descr">
+                     <h2 class="portfolio_title"><a href="index.html">Бизнес-центр на Ленинградском проспекте</a></h2>
+                   </div>
+               </li>
+               <li class="portfolio_item">
+                   <figure class="portfolio_img">
+                      <a href="index.html"><span class="rollover"></span><img src="pic/portdolio_thumb2.jpg" alt=""></a>
+                   </figure>
+                   <div class="portfolio_descr">
+                     <h2 class="portfolio_title"><a href="index.html">Жилой дом на улице Станиславского</a></h2>
+                   </div>
+               </li>
+               <li class="portfolio_item">
+                   <figure class="portfolio_img">
+                      <a href="index.html"><span class="rollover"></span><img src="pic/portdolio_thumb3.jpg" alt=""></a>
+                   </figure>
+                   <div class="portfolio_descr">
+                     <h2 class="portfolio_title"><a href="index.html">Жилой дом на улице Берзарина</a></h2>
+                   </div>
+               </li>
+               <li class="portfolio_item">
+                   <figure class="portfolio_img">
+                      <a href="index.html"><span class="rollover"></span><img src="pic/portdolio_thumb4.jpg" alt=""></a>
+                   </figure>
+                   <div class="portfolio_descr">
+                     <h2 class="portfolio_title"><a href="index.html">Отель Hilton  на Ленинградском шоссе</a></h2>
+                   </div>
+               </li>
+               <li class="portfolio_item">
+                   <figure class="portfolio_img">
+                      <a href="index.html"><span class="rollover"></span><img src="pic/portdolio_thumb5.jpg" alt=""></a>
+                   </figure>
+                   <div class="portfolio_descr">
+                     <h2 class="portfolio_title"><a href="index.html">Бизнес-парк в Научном проезде</a></h2>
+                   </div>
+               </li>
+               <li class="portfolio_item">
+                   <figure class="portfolio_img">
+                      <a href="index.html"><span class="rollover"></span><img src="pic/portdolio_thumb2.jpg" alt=""></a>
+                   </figure>
+                   <div class="portfolio_descr">
+                     <h2 class="portfolio_title"><a href="index.html">Бизнес-парк в Научном проезде</a></h2>
+                   </div>
+               </li>
+             </ul>
+           </div>
+           <a class="buttons next" href="#"></a>
+         </div>
+        <!-- End of Carousel -->
+
+        <div class="p_abs nav_bottom">
+          <!-- Social block -->
+          <div class="wrapper social_icons">
+            <a href="#" class="soc_icon"><img src="images/soc1.jpg" alt=""></a>
+            <a href="#" class="soc_icon"><img src="images/soc2.jpg" alt=""></a>
+            <a href="#" class="soc_icon"><img src="images/soc3.jpg" alt=""></a>
+            <a href="#" class="soc_icon"><img src="images/soc4.jpg" alt=""></a>
+          </div>
+          <!-- End of social block -->
+          <div class="created_by">
+            Created by <span>Vasily Kupreev</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  <!--==============================> Content <================================-->
+    <section id="content">
+      <div id="carousel" class="owl-carousel lt_gray">
+        <article class="content_item">
+          <div class="content_item_inner2">
+            <h1 class="title1 ind1 lt_gray">Московский офис</h1>
+            <ul class="address_list">
+              <li class="wrapper">
+                <div class="label">
+                  Адрес:
+                </div>
+                <div class="address_description">
+                  <dl>
+                    <dd>127055, Россия, Москва,</dd>
+                    <dd>улица Сущевская, 27/2</dd>
+                    <dd>Бизнес-квартал "Атмосфера" </dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="wrapper">
+                <div class="label">
+                  Телефоны:
+                </div>
+                <div class="address_description">
+                  <dl>
+                    <dd>8-(495)-665-03-71,</dd>
+                    <dd>8-(495)-665-03-72,</dd>
+                    <dd>8-(495)-665-03-73</dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="wrapper">
+                <div class="label">
+                  E-mail:
+                </div>
+                <div class="address_description">
+                  <a href="mailto:adm@adm-arch.ru" class="link1">adm@adm-arch.ru</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p_abs content_img">
+            <div class="map_wrapper">
+              <iframe id="map_canvas" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+            </div>
+          </div>
+        </article>
+        <article class="content_item">
+          <div class="content_item_inner2">
+            <h1 class="title1 ind1 lt_gray">Hamburg’s branch</h1>
+            <ul class="address_list">
+              <li class="wrapper">
+                <div class="label">
+                  Address
+                </div>
+                <div class="address_description">
+                  <dl>
+                    <dd>Elbchaussee 139</dd>
+                    <dd>22763 Hamburg, Deutschland</dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="wrapper">
+                <div class="label">
+                  Switchboard
+                </div>
+                <div class="address_description">
+                  <dl>
+                    <dd>+49 40 88151</dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="wrapper">
+                <div class="label">
+                  E-mail
+                </div>
+                <div class="address_description">
+                  <a href="mailto:adm@adm-arch.ru" class="link1">adm@adm-arch.de</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p_abs content_img">
+            <div class="map_wrapper">
+              <iframe id="map_canvas" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+            </div>
+          </div>
+        </article>
+        <article class="content_item">
+          <div class="content_item_inner2">
+            <h1 class="title1 ind1 lt_gray">Московский офис</h1>
+            <ul class="address_list">
+              <li class="wrapper">
+                <div class="label">
+                  Адрес:
+                </div>
+                <div class="address_description">
+                  <dl>
+                    <dd>127055, Россия, Москва,</dd>
+                    <dd>улица Сущевская, 27/2</dd>
+                    <dd>Бизнес-квартал "Атмосфера" </dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="wrapper">
+                <div class="label">
+                  Телефоны:
+                </div>
+                <div class="address_description">
+                  <dl>
+                    <dd>8-(495)-665-03-71,</dd>
+                    <dd>8-(495)-665-03-72,</dd>
+                    <dd>8-(495)-665-03-73</dd>
+                  </dl>
+                </div>
+              </li>
+              <li class="wrapper">
+                <div class="label">
+                  E-mail:
+                </div>
+                <div class="address_description">
+                  <a href="mailto:adm@adm-arch.ru" class="link1">adm@adm-arch.ru</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p_abs content_img">
+            <div class="map_wrapper">
+              <iframe id="map_canvas" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+</div>
+</body>
+</html>

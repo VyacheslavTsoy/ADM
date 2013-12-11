@@ -1,0 +1,61 @@
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 1024px) {
+	.owl-buttons .owl-next{
+	 	background: url("../images/next_arrow.png") 15% 50% no-repeat rgba(255,255,255,0.8);
+	}
+	.owl-buttons .owl-next:hover{
+	 	cursor: pointer;
+	 	background: url("../images/next_arrow.png") 15% 50% no-repeat rgba(255,255,255,0.4);
+	}
+	.content_item_inner,
+	.content_item_inner1,
+	.content_item_inner2{
+		padding-right: 50px;
+	}
+	.slideshow_banner_inner{padding-left: 20px;}
+}
+
+@media only screen and (min-height: 901px) {
+	#portfolio_slider .viewport{
+		height: 486px;
+	}
+	#map_canvas{
+		height: 500px;
+	}
+}
+@media only screen and (max-height: 900px) {
+	#portfolio_slider .viewport{
+		height: 386px;
+	}
+	.content_item_inner,
+	.content_item_inner1,
+	.content_item_inner2{
+		min-height: 330px;
+		padding-bottom: 30px;
+	}
+	.contact_page .content_item_inner2{
+		min-height: 270px;
+	}
+}
+
+@media only screen and (max-height: 768px) {
+	#portfolio_slider .viewport{
+		height: 286px;
+	}
+	.content_img{
+	 	position: relative;
+	 }	
+}
+
+@media only screen and (max-width: 995px) {
+ body{min-width:768px;}
+
+}
+
+@media only screen and (max-width: 767px) {
+ body{min-width:420px;}
+}
+
+@media only screen and (max-width: 479px) {
+ body{min-width:300px;}
+}
