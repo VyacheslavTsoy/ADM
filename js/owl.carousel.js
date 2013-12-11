@@ -723,10 +723,11 @@ if ( typeof Object.create !== "function" ) {
 		addCssSpeed : function(speed){
 			var base = this;
 			return {
-				"-webkit-transition": "all "+ speed +"ms ease",
-				"-moz-transition": "all "+ speed +"ms ease",
-				"-o-transition": "all "+ speed +"ms ease",
-				"transition": "all "+ speed +"ms ease"
+				"-webkit-transition": "all  "+ speed +"ms cubic-bezier(0.190, 1.000, 0.220, 1.000)", 
+			   "-moz-transition": "all  "+ speed +"ms cubic-bezier(0.190, 1.000, 0.220, 1.000)",
+			    "-ms-transition": "all  "+ speed +"ms cubic-bezier(0.190, 1.000, 0.220, 1.000)",
+			     "-o-transition": "all  "+ speed +"ms cubic-bezier(0.190, 1.000, 0.220, 1.000)", 
+			        "transition": " all  "+ speed +"ms cubic-bezier(0.190, 1.000, 0.220, 1.000)"
 			};
 		},
 
@@ -1453,7 +1454,7 @@ if ( typeof Object.create !== "function" ) {
 		touchDrag : true,
 
 		addClassActive : false,
-		transitionStyle : false,
+		transitionStyle : true,
 
 		beforeUpdate : false,
 		afterUpdate : false,

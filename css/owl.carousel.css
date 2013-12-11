@@ -59,11 +59,10 @@
   display: none;
 }
 .owl-buttons .owl-next{
-  background:url("../images/next_arrow.png") no-repeat 50% 50% rgba(255,255,255,0.8);
+  background:url("../images/next_arrow.png") no-repeat 50% 50% rgba(255,255,255,0.6);
   right: 0px;
 }
 .owl-buttons .owl-next:hover{
-  background-color: rgba(255,255,255,0.4);
   background-image: none;
   cursor:url("../images/next_arrow.png"), default;
 }

@@ -11,6 +11,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
   	<script src="js/jquery.tinycarousel.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
     <script src="js/jquery.flexslider.js"></script>
   	<script src="js/script.js"></script>
   	<script>
@@ -19,22 +20,11 @@
             axis: 'y',
             display: 1,
             controls: true,
-            interval: true,
+            interval: false,
             duration: 800
         });
         
         imgSize();
-
-        $('.flexslider').flexslider({
-            animation: "slide",
-            animationLoop: true,
-            controlNav: false,
-            slideshow: false,
-            smoothHeight: true,
-            variableImageWidth: true,
-            bannerSelector: "div.slideshow_banner",
-            itemBannerShowClass: 'show-banner'
-        });
 
         $(".spinner").addClass("show");
         function hide_spinner(){
@@ -42,16 +32,9 @@
           $("body").addClass("show")
         }
 
-        // $(".slides li").each(function(){
-        //   var imgW = $(this).find("img").width();
-        //   var imgH = $(this).find("img").height();
-        //   var contentW = $("#content").width();
+        setTimeout(hide_spinner, 3000);
 
-        //   if(imgW < imgH){
-        //     $(this).addClass("vertical");
-        //   }
-        // })
-        setTimeout(hide_spinner, 3000)
+
 			});
 
       $(window).resize(function(){
@@ -73,6 +56,27 @@
          }
        })
       }
+
+      function smallScreen(){
+          if($(window).width() > 767){
+            $('.flexslider').flexslider({
+              animation: "slide",
+              animationLoop: true,
+              controlNav: false,
+              slideshow: false,
+              smoothHeight: true,
+              variableImageWidth: true,
+              bannerSelector: "div.slideshow_banner",
+              itemBannerShowClass: 'show-banner'
+          });
+        }
+        else if($(window).width() < 767){
+          
+        }
+      }
+
+      smallScreen();
+      $(window).on("resize", smallScreen);
       
 	 </script>
 	<!--[if lt IE 8]>
@@ -127,7 +131,7 @@
              <ul class="overview">
                <li class="portfolio_item current_item">
                    <figure class="portfolio_img">
-                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb1.jpg" alt=""></a>
+                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb1.jpeg" alt=""></a>
                    </figure>
                    <div class="portfolio_descr">
                      <h2 class="portfolio_title"><a href="index.html">Бизнес-центр на Ленинградском проспекте</a></h2>
@@ -135,7 +139,7 @@
                </li>
                <li class="portfolio_item">
                    <figure class="portfolio_img">
-                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb2.jpg" alt=""></a>
+                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb2.jpeg" alt=""></a>
                    </figure>
                    <div class="portfolio_descr">
                      <h2 class="portfolio_title"><a href="index.html">Жилой дом на улице Станиславского</a></h2>
@@ -143,7 +147,7 @@
                </li>
                <li class="portfolio_item">
                    <figure class="portfolio_img">
-                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb3.jpg" alt=""></a>
+                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb3.jpeg" alt=""></a>
                    </figure>
                    <div class="portfolio_descr">
                      <h2 class="portfolio_title"><a href="index.html">Жилой дом на улице Берзарина</a></h2>
@@ -151,7 +155,7 @@
                </li>
                <li class="portfolio_item">
                    <figure class="portfolio_img">
-                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb4.jpg" alt=""></a>
+                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb4.jpeg" alt=""></a>
                    </figure>
                    <div class="portfolio_descr">
                      <h2 class="portfolio_title"><a href="index.html">Отель Hilton  на Ленинградском шоссе</a></h2>
@@ -159,7 +163,7 @@
                </li>
                <li class="portfolio_item">
                    <figure class="portfolio_img">
-                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb5.jpg" alt=""></a>
+                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb5.jpeg" alt=""></a>
                    </figure>
                    <div class="portfolio_descr">
                      <h2 class="portfolio_title"><a href="index.html">Бизнес-парк в Научном проезде</a></h2>
@@ -167,7 +171,7 @@
                </li>
                <li class="portfolio_item">
                    <figure class="portfolio_img">
-                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb2.jpg" alt=""></a>
+                      <a href="#"><span class="rollover"></span><img src="pic/portdolio_thumb2.jpeg" alt=""></a>
                    </figure>
                    <div class="portfolio_descr">
                      <h2 class="portfolio_title"><a href="index.html">Бизнес-парк в Научном проезде</a></h2>
@@ -198,8 +202,7 @@
     <section id="content">
       <div id="slider" class="flexslider">
         <ul class="slides">
-          <li><img src="images/slide_img.jpg" alt=""></li>
-          <li><img src="images/slide_img.jpg" alt=""><div class="slideshow_banner">
+          <li><img src="images/photo1.jpg" alt=""><div class="slideshow_banner">
             <div class="slideshow_banner_inner">
               <h1 class="title1 slide_caption">БИЗНЕС-ЦЕНТР НА ЛЕНИНГРАДСКОМ ПРОСПЕКТЕ</h1>
               <p class="p2">информация о проекте</p>
@@ -265,9 +268,10 @@
               Изначальное градостроительное решение комплекса разработано компанией Fitzroy Robinson architects
             </div>
           </div></li>
-          <li><img src="images/slide_img_v.jpg" alt=""></li>
-          <li><img src="images/slide_img.jpg" alt=""></li>
-          <li><img src="images/slide_img_v.jpg" alt=""></li>
+          <li><img src="images/photo2.jpg" alt=""></li>
+          <li><img src="images/photo3.jpg" alt=""></li>
+          <li><img src="images/photo4.jpg" alt=""></li>
+          <li><img src="images/photo5.jpg" alt=""></li>
         </ul>
       </div>
     </section>

@@ -45,6 +45,9 @@
 	.content_img{
 	 	position: relative;
 	 }	
+	 .downloads .content_item_inner{
+	 	min-height: 232px;
+	 }
 }
 
 @media only screen and (max-width: 995px) {
