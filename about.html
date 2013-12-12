@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
     <script src="js/jquery.js"></script>
-  	<script src="js/jquery.tinycarousel.min.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
+  	<script src="js/jquery.tinycarousel.js"></script>
     <script src="js/owl.carousel.js"></script>
   	<script src="js/script.js"></script>
   	<script>
@@ -20,7 +20,8 @@
             display: 1,
             controls: true,
             interval: false,
-            duration: 800
+            duration: 800,
+            mouseWheel: true
         });
         
         $("#carousel").owlCarousel({
@@ -72,7 +73,7 @@
         </div>
 
         <!-- Main Menu  -->
-        <ul class="reg menu var2">
+        <ul class="reg menu var1">
           <li class="menu_item current"><a href="about.html" data-hover="Мастерская">Мастерская</a></li>
           <li class="menu_item"><a href="downloads.html" data-hover="скачать&nbsp;PDF">скачать PDF</a></li>
           <li class="menu_item"><a href="vacancy.html" data-hover="вакансии">вакансии</a></li>
