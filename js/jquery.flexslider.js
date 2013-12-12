@@ -906,6 +906,9 @@ var marginitem=0
         var sliderOffset, arr;
 
         if (type === "init") {
+            if ($(slider).find('.'+ namespace + 'viewport')){
+                $($(slider).find('.'+ namespace + 'viewport')[0]).remove();
+            }
           slider.viewport = $('<div class="' + namespace + 'viewport"></div>').css({"overflow": "hidden", "position": "relative"}).appendTo(slider).append(slider.container);
           // INFINITE LOOP:
           slider.cloneCount = 0;
@@ -1090,6 +1093,24 @@ var marginitem=0
       slider.vars.removed(slider);
     }
 
+    slider.destroy = function() {
+      slider.pause(); // pause the timer
+      slider.transitions = false; // kill transitions
+      if (slider.vars.controlNav && slider.vars.manualControls == "") slider.controlNav.closest('.flex-control-nav').remove();
+        if (slider.vars.directionNav) slider.directionNav.closest('.flex-direction-nav').remove();
+        if (slider.vars.pausePlay) slider.pausePlay.closest('.flex-pauseplay').remove();
+        if (slider.vars.keyboardNav && $('ul.slides').length == 1) $(document).unbind('keyup', keyboardMove);
+      if (slider.vars.mousewheel) slider.unbind(slider.mousewheelEvent);
+        if (slider.vars.animationLoop) slider.find('.clone').remove();
+        if (slider.vertical) slider.height("auto");
+        slider.removeData('flexslider');
+        $(window).unbind("resize" + slider.vars.eventNamespace + "-" + slider.id + " focus" + slider.vars.eventNamespace + "-" + slider.id + " orientationchange" + slider.vars.eventNamespace + "-" + slider.id)
+        slider.find('ul.slides').removeAttr('style').find('li').removeAttr('style');
+        slider.find('ul.slides').unwrap(); // removes the .flex-viewport div
+        slider.doMath = function(){};
+        return false;
+
+    }
     //FlexSlider: Initialize
     methods.init();
   }
@@ -1198,6 +1219,7 @@ var marginitem=0
         case "next": $slider.flexAnimate($slider.getTarget("next"), true); break;
         case "prev":
         case "previous": $slider.flexAnimate($slider.getTarget("prev"), true); break;
+        case "destroy": $slider.destroy(); break;
         default: if (typeof options === "number") $slider.flexAnimate(options, true);
       }
     }

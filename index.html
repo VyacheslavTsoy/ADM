@@ -15,8 +15,8 @@
     <script src="js/jquery.flexslider.js"></script>
   	<script src="js/script.js"></script>
   	<script>
-		  $(window).load(function() {
-				$('#portfolio_slider').tinycarousel({
+      $(window).load(function() {
+        $('#portfolio_slider').tinycarousel({
             axis: 'y',
             display: 1,
             controls: true,
@@ -25,6 +25,33 @@
         });
         
         imgSize();
+        var flexslideroptions = {
+            animation: "slide",
+            animationLoop: true,
+            itemWidth: ' ',
+            controlNav: false,
+            slideshow: false,
+            smoothHeight: true,
+            variableImageWidth: true,
+            bannerSelector: "div.slideshow_banner",
+            itemBannerShowClass: 'show-banner'
+        }
+        if ($(window).width() > 768){
+            $('.flexslider').flexslider(flexslideroptions);
+        }
+        $(window).resize(function(){
+            if ($(window).width() < 769){
+                if( $('.flexslider').data('flexslider') ) {
+                    $('.flexslider').flexslider('destroy');
+                }
+            } else {
+                if(! $('.flexslider').data('flexslider') ) {
+                    $('.flexslider').flexslider(flexslideroptions);
+                }
+            }
+
+
+        });
 
         $(".spinner").addClass("show");
         function hide_spinner(){
@@ -35,7 +62,7 @@
         setTimeout(hide_spinner, 3000);
 
 
-			});
+      });
 
       $(window).resize(function(){
         imgSize()
@@ -57,28 +84,7 @@
        })
       }
 
-      function smallScreen(){
-          if($(window).width() > 767){
-            $('.flexslider').flexslider({
-              animation: "slide",
-              animationLoop: true,
-              controlNav: false,
-              slideshow: false,
-              smoothHeight: true,
-              variableImageWidth: true,
-              bannerSelector: "div.slideshow_banner",
-              itemBannerShowClass: 'show-banner'
-          });
-        }
-        else if($(window).width() < 767){
-          
-        }
-      }
-
-      smallScreen();
-      $(window).on("resize", smallScreen);
-      
-	 </script>
+   </script>
 	<!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
