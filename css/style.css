@@ -192,7 +192,7 @@ header h1{}
     }
     .lang_list a:hover,
     .lang_list a.active{
-      color: #b7b7b7;
+      color: #676767;
     }
 
 .menu{
@@ -232,6 +232,15 @@ header h1{}
       .menu_item.current a,
       .menu_item a:hover{
         color: #676767;
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        transform: translateX(10px);
+      }
+      .menu_item a:active{
+        color: #676767;
+        -webkit-transform: translateX(5px);
+        -moz-transform: translateX(5px);
+        transform: translateX(5px);
       }
       .menu_item.current a{
         font-size: 14px;
