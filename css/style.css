@@ -229,18 +229,20 @@ header h1{}
         content: attr(data-hover);
       }
 
-      .menu_item.current a,
-      .menu_item a:hover{
-        color: #525252;
+      .menu_item.current a{
         -webkit-transform: translateX(10px);
         -moz-transform: translateX(10px);
         transform: translateX(10px);
       }
+      .menu_item a:hover,
+      .menu_item.current a{
+        color: #525252;
+      }
       .menu_item a:active{
         color: #525252;
-        -webkit-transform: translateX(15px);
-        -moz-transform: translateX(15px);
-        transform: translateX(15px);
+        -webkit-transform: translateX(5px);
+        -moz-transform: translateX(5px);
+        transform: translateX(5px);
       }
       .menu_item.current a{
         font-size: 14px;
@@ -305,6 +307,9 @@ header h1{}
     bottom: -30px;
     background: url("../images/carousel_next.png") no-repeat;
   }
+  #portfolio_slider .buttons:hover{
+    background-position: 0 -10px;
+  }
 
   #portfolio_slider .viewport{
     height: 386px;
@@ -366,7 +371,8 @@ header h1{}
     
   }
   
-  .portfolio_item:hover img{
+  .portfolio_item:hover img,
+  .soc_icon:hover img{
     -moz-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -o-transform: scale(1.05);
@@ -705,6 +711,7 @@ h2,h3,h4{
 /*================================>> hovers <<========================================*/
 a,
 .portfolio_item img,
+/*.soc_icon img,*/
 .soc_icon:before,
 .whitebox,
 .rollover,
@@ -735,6 +742,7 @@ a:active,
 }
 
 .portfolio_item:hover img,
+.soc_icon:hover img,
 .portfolio_item:hover .rollover{
     -webkit-transition: all 0.45s ease;
     -moz-transition: all 0.45s ease;
