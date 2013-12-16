@@ -33,13 +33,18 @@
           navigation: true,
           pagination: false,
           navigationText:  [" "," "],
-          slideSpeed: 1200
+          slideSpeed: 1800,
+          rewindSpeed : 4000
         });
 
         function hide_spinner(){
           $("body").addClass("show")
         }
         setTimeout(hide_spinner, 500)
+
+        $("#show_menu").click(function(){
+          $(".m_navigation").addClass("in");
+        });
 			});
 	 </script>
 	<!--[if lt IE 8]>
@@ -57,6 +62,11 @@
 <body>
 
 <div class="global_wrap">
+
+    <div class="open_nav_btns">
+      <a href="#" id="show_menu">МЕНЮ</a>
+      <a href="index.html">ПОРТФОЛИО</a>
+    </div>
   <!--==============================> Navigation <==================================-->
      <nav class="m_navigation">
       <div class="nav_inner">
@@ -140,19 +150,6 @@
          </div>
         <!-- End of Carousel -->
 
-        <div class="p_abs nav_bottom">
-          <!-- Social block -->
-          <div class="wrapper social_icons">
-            <a href="#" class="soc_icon"><img src="images/soc1.jpg" alt=""></a>
-            <a href="#" class="soc_icon"><img src="images/soc2.jpg" alt=""></a>
-            <a href="#" class="soc_icon"><img src="images/soc3.jpg" alt=""></a>
-            <a href="#" class="soc_icon"><img src="images/soc4.jpg" alt=""></a>
-          </div>
-          <!-- End of social block -->
-          <div class="created_by">
-            Created by <span>Vasily Kupreev</span>
-          </div>
-        </div>
       </div>
     </nav>
   <!--==============================> Content <================================-->
@@ -289,6 +286,20 @@
         </article>
       </div>
     </section>
+
+    <div class="p_abs nav_bottom">
+      <!-- Social block -->
+      <div class="wrapper social_icons">
+        <a href="#" class="soc_icon"><img src="images/soc1.jpg" alt=""></a>
+        <a href="#" class="soc_icon"><img src="images/soc2.jpg" alt=""></a>
+        <a href="#" class="soc_icon"><img src="images/soc3.jpg" alt=""></a>
+        <a href="#" class="soc_icon"><img src="images/soc4.jpg" alt=""></a>
+      </div>
+      <!-- End of social block -->
+      <div class="created_by">
+        Created by <span>Vasily Kupreev</span>
+      </div>
+    </div>
 </div>
 </body>
 </html>

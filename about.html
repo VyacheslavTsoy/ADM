@@ -32,15 +32,27 @@
           navigation: true,
           pagination: false,
           navigationText:  [" "," "],
-          slideSpeed: 1200
+          slideSpeed: 1800,
+          rewindSpeed : 4000
         });
-
         function hide_spinner(){
           $("body").addClass("show")
         }
 
-        setTimeout(hide_spinner, 3000)
+        setTimeout(hide_spinner, 3000);
+
+        // var w = $(window).width();
+        // if( w <= 768){
+        //   owl.destroy();
+        // }
+        // 
+        
+        $("#show_menu").click(function(){
+          $(".m_navigation").addClass("in");
+        });
 			});
+
+      
 	 </script>
 	<!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
@@ -57,6 +69,10 @@
 <body>
 
 <div class="global_wrap">
+    <div class="open_nav_btns">
+      <a href="#" id="show_menu">МЕНЮ</a>
+      <a href="index.html">ПОРТФОЛИО</a>
+    </div>
   <!--==============================> Navigation <==================================-->
      <nav class="m_navigation">
       <div class="nav_inner">
@@ -73,7 +89,7 @@
         </div>
 
         <!-- Main Menu  -->
-        <ul class="reg menu var1">
+        <ul class="reg menu var1" id="menu">
           <li class="menu_item current"><a href="about.html" data-hover="Мастерская">Мастерская</a></li>
           <li class="menu_item"><a href="downloads.html" data-hover="скачать&nbsp;PDF">скачать PDF</a></li>
           <li class="menu_item"><a href="vacancy.html" data-hover="вакансии">вакансии</a></li>
@@ -140,19 +156,6 @@
          </div>
         <!-- End of Carousel -->
 
-        <div class="p_abs nav_bottom">
-          <!-- Social block -->
-          <div class="wrapper social_icons">
-            <a href="#" class="soc_icon"><img src="images/soc1.jpg" alt=""></a>
-            <a href="#" class="soc_icon"><img src="images/soc2.jpg" alt=""></a>
-            <a href="#" class="soc_icon"><img src="images/soc3.jpg" alt=""></a>
-            <a href="#" class="soc_icon"><img src="images/soc4.jpg" alt=""></a>
-          </div>
-          <!-- End of social block -->
-          <div class="created_by">
-            Created by <span>Vasily Kupreev</span>
-          </div>
-        </div>
       </div>
     </nav>
   <!--==============================> Content <================================-->
@@ -218,6 +221,19 @@
         </article>
       </div>
     </section>
+    <div class="p_abs nav_bottom">
+      <!-- Social block -->
+      <div class="wrapper social_icons">
+        <a href="#" class="soc_icon"><img src="images/soc1.jpg" alt=""></a>
+        <a href="#" class="soc_icon"><img src="images/soc2.jpg" alt=""></a>
+        <a href="#" class="soc_icon"><img src="images/soc3.jpg" alt=""></a>
+        <a href="#" class="soc_icon"><img src="images/soc4.jpg" alt=""></a>
+      </div>
+      <!-- End of social block -->
+      <div class="created_by">
+        Created by <span>Vasily Kupreev</span>
+      </div>
+    </div>
 </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 @import "../css/elastislide.css";
 @import "../css/owl.carousel.css";
 @import "../css/flexslider.css";
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic-ext);
 article,aside,audio,canvas,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,meter,nav,output,progress,section,source,video{display:block}mark,rp,rt,ruby,summary,time{display:inline}
 /* Global properties ======================================================== */
 html,
@@ -63,7 +63,8 @@ body {
   .spinner.show .spinner_img1,
   .spinner.show .spinner_img2,
   .show .m_navigation,
-  .show #content{
+  .show #content,
+  .show .nav_bottom{
     transform: translate(0px,0);
     -webkit-transform: translate(0px,0);
     -o-transform: translate(0px,0);
@@ -166,6 +167,32 @@ a:hover{
 }
 
 /*======================> Navigation <======================*/
+.open_nav_btns{
+  display: none;
+  overflow: hidden;
+  border: 1px solid #e1e1e1;
+  border-left: none;
+}
+  .open_nav_btns a{
+    display: block;
+    width: 50%;
+    text-align: center;
+    height: 98px;
+    float: left;
+    line-height: 98px;
+    font-size: 24px;
+    color: #949494;
+    font-weight: 100;
+    position: relative;
+  }
+    .open_nav_btns a:before{
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background: #e1e1e1;
+      content: "";
+    }
 
 header {}
 header h1{}
@@ -246,20 +273,25 @@ header h1{}
   bottom: 0;
   padding-bottom: 80px;
   z-index: 11;
-  transform: translate(-30px,0);
-  -webkit-transform: translate(-30px,0);
-  -o-transform: translate(-30px,0);
-  -moz-transform: translate(-30px,0);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-  -webkit-transition-delay: 1s;
-  -o-transition-delay: 1s;
-  -moz-transition-delay: 1s;
-  transition-delay: 1s;
+}
 
-  opacity: 0;
+@media only screen and (min-width: 768px) {
+  .nav_bottom,
+  .m_navigation{
+    transform: translate(-30px,0);
+    -webkit-transform: translate(-30px,0);
+    -o-transform: translate(-30px,0);
+    -moz-transform: translate(-30px,0);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    transition-delay: 1s;
+    opacity: 0;
+  }
 }
 
   .nav_inner{
@@ -269,6 +301,7 @@ header h1{}
 .nav_bottom{
   bottom: 14px;
   left: 68px;
+  z-index: 11;
 }
 
 /*===========> Portfolio Carousel <===========*/
