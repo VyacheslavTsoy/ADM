@@ -306,7 +306,7 @@ header h1{}
 }
 
 /*===========> Portfolio Carousel <===========*/
-
+#projects_list{display: none;}
 #portfolio_slider{
   margin: 52px 1px 61px;
   position: relative;
