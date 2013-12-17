@@ -169,6 +169,7 @@ a:hover{
 /*======================> Navigation <======================*/
 .open_nav_btns{
   display: none;
+  text-transform: uppercase;
   overflow: hidden;
   border: 1px solid #e1e1e1;
   border-left: none;
@@ -354,7 +355,8 @@ header h1{}
     .portfolio_item.current_item a{
       color: #525252;
     }
-
+  
+  .projects_list{display: none;}
   .portfolio_img,
   .portfolio_descr{
     position: relative;

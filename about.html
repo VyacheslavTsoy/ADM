@@ -9,8 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
     <script src="js/jquery.js"></script>
-    <script src="js/jquery.mousewheel.js"></script>
-  	<script src="js/jquery.tinycarousel.js"></script>
+    <script src="js/jquery.tinycarousel.js"></script>
     <script src="js/owl.carousel.js"></script>
   	<script src="js/script.js"></script>
   	<script>
@@ -23,23 +22,47 @@
             duration: 800,
             mouseWheel: true
         });
-        
-        $("#carousel").owlCarousel({
-          items : 2,
-          itemsDesktop : [1199,2],
-          itemsDesktopSmall : [980,2],
-          addClassActive: true,
-          navigation: true,
-          pagination: false,
-          navigationText:  [" "," "],
-          slideSpeed: 1800,
-          rewindSpeed : 4000
+
+
+        var owlparams = {
+            items : 2,
+            itemsDesktop : [1199,2],
+            itemsDesktopSmall : [980,2],
+            addClassActive: true,
+            navigation: true,
+            pagination: false,
+            navigationText:  [" "," "],
+            slideSpeed: 1800,
+            rewindSpeed : 4000
+        }
+
+        if ($(window).width() > 768){
+            $("#carousel").owlCarousel(owlparams);
+            var owl = $("#carousel").data('owlCarousel');
+
+        }
+        $(window).resize(function(){
+            if ($(window).width() < 769){
+                if (owl){
+                    owl.destroy();
+                }
+            } else {
+                $("#carousel").owlCarousel(owlparams);
+            }
         });
+
+
+
         function hide_spinner(){
           $("body").addClass("show")
         }
 
-        setTimeout(hide_spinner, 3000);
+        if ($(window).width() > 768){
+          setTimeout(hide_spinner, 3000);
+        }
+        else{
+          $("body").addClass("show")
+        }
 
         // var w = $(window).width();
         // if( w <= 768){

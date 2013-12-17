@@ -74,15 +74,53 @@
  		margin-bottom: 20px;
  	}
  	.content_item_inner{
- 		padding: 40px 49px;
+ 		padding: 40px 49px 65px;
+ 	}
+ 	.content_item_inner1{
+ 		padding: 50px 49px 40px;
+ 	}
+ 	.content_item_inner1 p:last-child{
+		margin-bottom: 0;
  	}
  	.title1{
  		font-size: 24px;
  		line-height: 29px;
  		margin-bottom: 30px;
  	}
+ 	.slide_caption{
+ 		font-size: 20px;
+ 		line-height: 24px;
+ 		margin-bottom: 0px;
+ 	}
+ 	.slide_caption+p{
+ 		margin-bottom: 24px;
+ 	}
+ 	.slide_list_label{width: 240px;}
+ 	.slideshow_banner_inner {
+		padding: 26px 50px 40px;
+	}
+	.slides>li:after{
+		display: none;
+	}
+ 	.title1.var1{height: auto;}
+ 	.direct_name,
+ 	.title5{
+ 		font-size: 20px;
+ 		line-height: 24px;
+ 	}
+ 	.position{
+ 		font-size: 16px;
+ 		line-height: 24px;
+ 	}
+ 	.label{width: 200px;}
+ 	.address_list{
+ 		margin-bottom: 48px;
+ 	}
  	.open_nav_btns{
  		display: block;
+ 	}
+ 	.resume_address{
+ 		margin-bottom: 35px;
  	}
 
  	.m_navigation{
@@ -92,11 +130,11 @@
 	 	max-width: 100%;
 	 	background: #fff;
 	 	padding: 125px 0 0;
-	 	-moz-transform: translateX(-100%) !important;
-		-webkit-transform: translateX(-100%) !important;
-		-o-transform: translateX(-100%) !important;
-		-ms-transform: translateX(-100%) !important;
-		transform: translateX(-100%) !important
+	 	-moz-transform: translateX(-120%) !important;
+		-webkit-transform: translateX(-120%) !important;
+		-o-transform: translateX(-120%) !important;
+		-ms-transform: translateX(-120%) !important;
+		transform: translateX(-120%) !important
 		-webkit-transition: all 0.6s ease;
 	    -moz-transition: all 0.9s ease;
 	    -o-transition: all 0.9s ease;
@@ -171,17 +209,59 @@
 	 .created_by{
 	 	display: none;
 	 }
+
 	
 	.nav_bottom{
 		position: relative;
+		left: 0;
+		bottom: 0;
+		text-align: center;
+		padding: 70px 0;
 	}
+		.soc_icon{
+			display: inline-block;
+			margin: 0 5px;
+			float: none;
+		}
 
 	#content{
 		padding: 0;
 		margin: 0;
+		height: auto;
 		overflow: auto;
+		transition: all 0s ease;
+		-webkit-transition-delay: 0s;
+		-o-transition-delay: 0s;
+		-moz-transition-delay: 0s;
+		transition-delay: 0s;
 	}
 
+	#carousel{
+		min-width: 0;
+	}
+		.content_img{
+			position: relative;
+		}
+		.text_box{
+			margin-bottom: 0;
+			padding-right: 0;
+		}
+		.downloads .content_item_inner{
+			min-height: 1px;
+			padding-bottom: 25px;
+		}
+		.content_item{
+			height: auto;
+		}
+		.content_item_img img{
+			float: none;
+			width: 100%;
+			height: auto;
+		}
+		
+		.bg1:after{
+			height: 100%;
+		}
 	.logo,
 	.lang_list{
 		float: none;
@@ -195,8 +275,76 @@
 		height: 85px;
 		background: url("../images/resp_logo.png");
 	}
+	.owl-carousel{
+		display: block;
+	}
+	.slides>li:before{
+		display: none !important;
+	}
+	.flexslider, .slides, .slides li, .flex-viewport{
+		height: auto;
+	}
+	.slideshow_banner{
+		position: relative;
+		transform: translate(0px,0px);
+		-webkit-transform: translate(0px,0px);
+		-o-transform: translate(0px,0px);
+		-moz-transform: translate(0px,0px);
+		opacity: 1;
+		width: auto;
+		max-width: 100%;
+	}
+	#projects_list{
+		background: #fff;
+		z-index: 88;
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		top: 0;
+		padding: 50px 100px;
+		-webkit-transition: all 1000ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+	   -moz-transition: all 1000ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+	    -ms-transition: all 1000ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+	     -o-transition: all 1000ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+	        transition: all 1000ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+	}
+		#projects_list .portfolio_descr{
+			padding-left: 95px;
+		}
+		#projects_list .portfolio_img a{
+			width: 126px;
+			height: 126px;
+		}
+		
+		#projects_list .portfolio_item{
+			height: auto;
+			margin-bottom: 62px;
+		}
+
+		#projects_list.hide{
+			-moz-transform: translateX(150%);
+			-webkit-transform: translateX(150%);
+			-o-transform: translateX(150%);
+			-ms-transform: translateX(150%);
+			transform: translateX(150%);
+			transition-delay: 0.2s;
+			-webkit-transition-delay: 0.2s;
+		}
 }
 
 @media only screen and (max-width: 479px) {
  body{min-width:300px;}
+ .direct_img{
+ 	float: none;
+ 	width: auto;
+ 	margin: 0 0 20px;
+ }
+ .content_item_inner1,
+ .content_item_inner{
+ 	padding-left: 30px;
+ 	padding-right: 30px;
+ }
+ .label{float: none;margin-bottom: 15px;}
 }

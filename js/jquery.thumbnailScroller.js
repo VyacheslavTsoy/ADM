@@ -22,10 +22,10 @@ Homepage: manos.malihu.gr/jquery-thumbnail-scroller
     return this.each(function(){ 
 		//cache vars
 		var $this=$(this);
-		var $scrollerContainer=$this.children(".viewport");
-		var $scroller=$this.children(".viewport").children(".overview");
-		var $scrollerNextButton=$this.children(".buttons.prv");
-		var $scrollerPrevButton=$this.children(".buttons.nxt");
+		var $scrollerContainer=$this;
+		var $scroller=$this.children(".overview");
+		var $scrollerNextButton=$this.parent().children(".buttons.next");
+		var $scrollerPrevButton=$this.parent().children(".buttons.prev");
 		//set scroller width
 		if(options.scrollerOrientation=="horizontal"){
 			$scrollerContainer.css("width",999999); 
@@ -69,7 +69,8 @@ Homepage: manos.malihu.gr/jquery-thumbnail-scroller
 					var destY=Math.round(-((totalHeight-$this.height())*(mousePercentY)));
 					$scroller.stop(true,false).animate({left:destX,top:destY},options.scrollEasingAmount,options.scrollEasing); 
 				});
-				$scrollerPrevButton.add($scrollerNextButton).hide(); //hide buttons
+                ClickScrolling();
+				//$scrollerPrevButton.add($scrollerNextButton).hide(); //hide buttons
 			}
 			//auto scrolling
 			if(options.autoScrolling>0){
