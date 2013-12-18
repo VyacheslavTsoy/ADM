@@ -254,12 +254,12 @@ header h1{}
       .menu_item.current a{
         color: #525252;
       }
-      .menu_item a:active{
+      /*.menu_item a:active{
         color: #525252;
         -webkit-transform: translateX(5px);
         -moz-transform: translateX(5px);
         transform: translateX(5px);
-      }
+      }*/
       .menu_item.current a{
         font-size: 14px;
       }
@@ -312,7 +312,7 @@ header h1{}
   position: relative;
 }
   #portfolio_slider .buttons{
-    display: block;
+    display: block !important;
     width: 20px;
     height: 10px;
     position: absolute;
@@ -397,8 +397,7 @@ header h1{}
     
   }
   
-  .portfolio_item:hover img,
-  .soc_icon:hover img{
+  .portfolio_item:hover img{
     -moz-transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -o-transform: scale(1.05);
@@ -781,7 +780,6 @@ a:active,
 }
 
 .portfolio_item:hover img,
-.soc_icon:hover img,
 .portfolio_item:hover .rollover{
     -webkit-transition: all 0.45s ease;
     -moz-transition: all 0.45s ease;
@@ -808,7 +806,6 @@ a:active,
 .map_wrapper{
   overflow:hidden;
 }
-
 
 /*================================>> Contacts Info <<========================================*/
 
