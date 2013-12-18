@@ -516,6 +516,7 @@ header h1{}
   top: 0;
   position: absolute;
   z-index: 88;
+  opacity: 0;
   background: url("../images/preloader.gif") 43% 50% no-repeat #fff;
 }
 
