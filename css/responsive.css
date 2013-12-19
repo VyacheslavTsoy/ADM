@@ -21,9 +21,6 @@
 	#portfolio_slider .viewport{
 		height: 486px;
 	}
-	#map_canvas{
-		height: 500px;
-	}
 }
 @media only screen and (max-height: 900px) {
 	#portfolio_slider .viewport{
@@ -46,6 +43,7 @@
 	}
 	.content_img{
 	 	position: relative;
+	 	bottom: 100px;
 	 }	
 	 .downloads .content_item_inner{
 	 	min-height: 232px;

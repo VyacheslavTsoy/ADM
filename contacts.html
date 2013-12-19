@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
     <script src="js/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="js/jquery.tinycarousel.js"></script>
-    <script src="js/owl.carousel.js"></script>
+    <script src="js/owl.carousel.js"></script> 
   	<script src="js/script.js"></script>
   	<script>
 		  $(window).load(function() {
@@ -65,7 +66,49 @@
           $(".m_navigation").addClass("in");
         });
 			});
-	 </script>
+
+      // add Google API
+      var map;
+      var egglabs = new google.maps.LatLng(55.783644,37.601241);
+      var mapCoordinates = new google.maps.LatLng(55.783644,37.601241);
+
+      var markers = [];
+      var image = new google.maps.MarkerImage(
+          'https://dl.dropboxusercontent.com/u/5337679/ADM/Layout/Desktop/adm_marker.png',
+          new google.maps.Size(133,66),
+          new google.maps.Point(0,0),
+          new google.maps.Point(42,56)
+        );
+
+      function addMarker() 
+      {
+            markers.push(new google.maps.Marker({
+            position: egglabs,
+            raiseOnDrag: false,
+            icon: image,
+              map: map,
+              draggable: false
+              }));
+            
+      }
+
+    function initialize() {
+      var mapOptions = {
+      backgroundColor: "#ffffff",
+        zoom: 16,
+        disableDefaultUI: true,
+          center: mapCoordinates,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+          
+        };
+      map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+      addMarker();
+       
+      }
+      google.maps.event.addDomListener(window, 'resize', initialize);
+      google.maps.event.addDomListener(window, 'load', initialize);
+	 
+   </script>
 	<!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -214,7 +257,7 @@
           </div>
           <div class="p_abs content_img">
             <div class="map_wrapper">
-              <iframe id="map_canvas" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+              <div id="map-canvas"></div>
             </div>
           </div>
         </article>
@@ -255,7 +298,7 @@
           </div>
           <div class="p_abs content_img">
             <div class="map_wrapper">
-              <iframe id="map_canvas" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+              <div id="map-canvas"></div>
             </div>
           </div>
         </article>
@@ -299,7 +342,7 @@
           </div>
           <div class="p_abs content_img">
             <div class="map_wrapper">
-              <iframe id="map_canvas" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+              <div id="map-canvas"></div>
             </div>
           </div>
         </article>
