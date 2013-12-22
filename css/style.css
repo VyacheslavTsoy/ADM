@@ -812,9 +812,10 @@ a:active,
 /*================================>> Contacts Info <<========================================*/
 
 #map-canvas,
+#map-canvas1,
 #map_canvas{
    width:100%;
-   height:380px;
+   height:586px;
 }
 .adress{}
 .adress span{

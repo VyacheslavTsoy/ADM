@@ -15,6 +15,7 @@
 		padding-right: 50px;
 	}
 	.slideshow_banner_inner{padding-left: 20px;}
+	.content_img{position: relative;}
 }
 
 @media only screen and (min-height: 901px) {
