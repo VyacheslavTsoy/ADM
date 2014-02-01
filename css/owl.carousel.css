@@ -53,12 +53,12 @@
 }
 
 
-.owl-buttons .owl-prev{
+.owl-buttons .cycle-prev{
   background: url("../images/prev_arrow.png") no-repeat;
   left: 50px;
   display: none;
 }
-.owl-buttons .owl-next{
+.cycle-next{
   background:url("../images/next_arrow.png") no-repeat 50% 50% rgba(255,255,255,0.6);
   right: 0px;
 }

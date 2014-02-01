@@ -2,7 +2,7 @@
 /*@import "../css/skeleton.css";*/
 /*@import "../css/superfish.css";*/
 @import "../css/elastislide.css";
-@import "../css/owl.carousel.css";
+/*@import "../css/owl.carousel.css";*/
 @import "../css/flexslider.css";
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic-ext);
 article,aside,audio,canvas,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,meter,nav,output,progress,section,source,video{display:block}mark,rp,rt,ruby,summary,time{display:inline}
@@ -597,7 +597,6 @@ header h1{}
 }
 
 .content_img{
-  bottom: 0;
   left: 0;
   width: 100%;
 }
@@ -616,7 +615,20 @@ header h1{}
 .downloads .content_item_inner{
   min-height: 220px;
 }
-
+.cycle-next{
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  background:url("../images/next_arrow.png") no-repeat 50% 50% rgba(255,255,255,0.6);
+  right: 0px;
+}
+.cycle-next:hover{
+  background-image: none;
+  cursor:url("../images/next_arrow.png"), default;
+}
 /*=====================> Vacancy page ========================*/
 
 .resume_address{
